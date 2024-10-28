@@ -301,10 +301,18 @@ open class FSPageControl: UIControl {
     }
     
 }
-
+#if swift(>=6.0)
 extension UIControl.State: @retroactive Hashable {
     public var hashValue: Int {
         return Int((6777*self.rawValue+3777)%UInt(UInt16.max))
     }
 }
+#else
+extension UIControl.State: Hashable {
+    public var hashValue: Int {
+        return Int((6777*self.rawValue+3777)%UInt(UInt16.max))
+    }
+}
+#endif
+
 
