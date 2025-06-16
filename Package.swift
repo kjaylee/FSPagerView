@@ -1,10 +1,11 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.9
+// ↑ 최신 Xcode 환경에 맞춰 버전을 올려주는 것을 권장합니다.
 import PackageDescription
 
 let package = Package(
     name: "FSPagerView",
     platforms: [
-        .iOS(.v9)
+        .iOS(.v13)
     ],
     products: [
         .library(name: "FSPagerView", targets: ["FSPagerView"]),
